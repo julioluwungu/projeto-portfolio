@@ -5,14 +5,15 @@ let foto = document.querySelector('section#ficha img.foto')
 // Persistência do tema
 const temasalvo = localStorage.getItem('tema');
 temaEscuro(temasalvo === 'escuro');
+atualizarFoto(temasalvo);
 
 // Persistência da foto
-if (temasalvo === 'escuro') {
-  if (foto.src.includes('claro')) {
+function atualizarFoto(tema) {
+  if (tema === 'escuro' && foto.src.includes('claro')) {
     foto.src = foto.src.replace('claro', 'escuro');
   }
-} else {
-  if (foto.src.includes('escuro')) {
+
+  if (tema === 'claro' && foto.src.includes('escuro')) {
     foto.src = foto.src.replace('escuro', 'claro');
   }
 }
@@ -31,12 +32,11 @@ function temaEscuro(tipo) {
 botao.addEventListener('click', () => {
   const isescuro = body.classList.toggle('escuro');
   temaEscuro(isescuro);
-  localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
-  if (localStorage.getItem('tema') == 'escuro' && foto.src.includes('perfil-claro.png')) {
-    foto.src = foto.src.replace('claro', 'escuro');
-  } else {
-    foto.src = foto.src.replace('escuro', 'claro');
-  }
+  
+  const tema = isescuro ? 'escuro' : 'claro';
+  localStorage.setItem('tema', tema);
+
+  atualizarFoto(tema);
 });
 
 // Scroll suave para links de navegação
