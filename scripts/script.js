@@ -21,11 +21,7 @@ botao.addEventListener('click', () => {
   const isescuro = body.classList.toggle('escuro');
   temaEscuro(isescuro);
   localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
-  if (foto.src.includes('perfil-claro.png')) {
-    foto.src = '../imagens/perfil-escuro.png';
-  } else {
-    foto.src = '../imagens/perfil-claro.png';
-  }
+  foto.src = foto.src.includes('claro') ? foto.src.replace('claro', 'escuro') : foto.src.replace('escuro', 'claro');
 });
 
 // Scroll suave para links de navegação
