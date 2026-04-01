@@ -1,6 +1,12 @@
-  
-/* Declarações das Variáveis */
-  
+/* Configurações Gerais */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
 :root {
   --fundo-principal: #f5f5f5;
   --texto: #222222;
@@ -10,12 +16,13 @@
   --fundo-card: #ffffff;
 }
 
-/* Configurações Gerais */
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+body.escuro {
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444;
 }
 
 body {
@@ -29,42 +36,308 @@ body {
 
 header {
   background-color: var(--destaque);
-  color: var(--texto-inverso);
-  padding: 10px;
+  padding: 12px 10px;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: flex-end;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-header > nav#menu {
-  
-}
-
-header > nav#menu > ul {
+header > nav#menu ul {
   list-style: none;
   display: flex;
   gap: 10px;
 }
 
-header a {
-  color: var(--texto-inverso);
+header > nav#menu a {
   text-decoration: none;
+  color: var(--texto-inverso);
   font-weight: 600;
   padding: 12px 15px;
   border-radius: 5px;
+  transition: all 0.5s;
 }
 
-header a:hover {
+header > nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
-  transition: background-color 0.5s, color 0.5s;
 }
 
-/* Cofigurações do Main */
+/* Configurações do Main */
 
+main {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 20px;
+}
 
+/* Configurações da Seção de Ficha */
+
+section#ficha {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 8px;
+  grid-column: 2 / 3;
+  margin-top: 20px;
+}
+
+section#ficha img.foto {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid var(--fundo-card);
+  outline: 3px solid var(--destaque);
+}
+
+section#ficha h1 {
+  color: var(--destaque);
+  margin: 15px 0px;
+  text-align: center;
+}
+
+section#ficha p {
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: 15px;
+}
+
+section#ficha div#social {
+  display: flex;
+  justify-content: center;
+  gap: 0.8em;
+  font-size: 1.5em;
+}
+
+section#ficha div#social > a {
+  color: var(--destaque);
+  transition: all 0.5s;
+}
+
+section#ficha div#social > a:hover {
+  color: var(--destaque-inverso);
+}
+
+/* Configuração da Seção de Detalhes */
+
+section#detalhes {
+  grid-column: 2 / 3;
+}
+
+article h2 {
+  color: var(--destaque);
+  margin-bottom: 20px;
+}
+
+section#detalhes article {
+  background-color: var(--fundo-card);
+  margin: 20px 0px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Configurações da Apresentação */
+
+div.video-conteiner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: auto;
+  overflow: hidden;
+}
+
+div.video-conteiner iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Configurações das Skills */
+
+div#skills-conteiner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+div.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.info span.nome {
+  font-weight: bolder;
+  color: var(--texto);
+}
+
+div.info span.porcentagem {
+  font-weight: bolder;
+  color: var(--destaque);
+}
+
+div.barra {
+  width: 100%;
+  height: 10px;
+  background-color: var(--fundo-principal);
+  border-radius: 4px;
+}
+
+div.barra div.progresso {
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: 4px;
+}
+
+/* Configurações das Formações */
+
+div#formacoes-conteiner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+div#formacoes-conteiner div.curso {
+  background-color: var(--fundo-principal);
+  padding: 10px 0px 10px 15px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: all 0.8s;
+}
+
+div#formacoes-conteiner div.curso:hover {
+  border-left: 15px solid var(--destaque);
+  cursor: pointer;
+}
+
+div.curso p.periodo {
+  font-size: 0.8em;
+  font-weight: bolder;
+  color: var(--texto);
+}
+
+div.curso h3.instituicao {
+  color: var(--destaque-inverso);
+}
+
+/* Configurações dos Projetos */
+
+div#projetos-conteiner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+div.projeto {
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.8s;
+}
+
+div.projeto:hover {
+  border-left: 15px solid var(--destaque);
+}
+
+div.projeto div.imagem {
+  width: 100%;
+}
+
+div.imagem a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+div.projeto img.foto {
+  width: 100%;
+  border-radius: 8px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+div.projeto summary {
+  cursor: pointer;
+  font-weight: 500;
+}
 
 /* Configurações do Footer */
 
+footer {
+  background-color: var(--destaque);
+  text-align: center;
+  padding: 15px;
+  color: var(--texto-inverso);
+}
 
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bolder;
+  transition: all 0.8s;
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
+  text-decoration: underline;
+}
+
+/* Configurações adicionais */
+
+@media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+    margin-bottom: 20px;
+  }
+
+  section#ficha h1 {
+    font-size: 1.6em;
+  }
+
+  section#detalhes {
+    grid-column: 3 / 4;
+  }
+
+  div#skills-conteiner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  div.projeto div.projeto-info {
+    width: 80%;
+  }
+
+  div.projeto div.imagem {
+    width: 20%;
+    height: 100%;
+    align-self: center;
+  }
+
+  div.projeto img.foto {
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-height: 200px;
+  }
+}

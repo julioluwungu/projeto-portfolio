@@ -3,29 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Júlio Luwungu</title>
+    <title>Portfólio de Júlio Luwungu</title>
     <link rel="stylesheet" href="estilos/style.css">
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <script src="https://kit.fontawesome.com/0b0be54f3d.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="escuro">
     <header>
         <nav id="menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Formações</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Tema</a></li>
+                <li><a href="#video" class="link"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#skills" class="link"><i class="fa-solid fa-brain"></i></a></li>
+                <li><a href="#formacoes" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
+                <li><a href="#projetos" class="link"><i class="fa-solid fa-trowel-bricks"></i></a></li>
+                <li><a href="#" class="link" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
             </ul>
-        </nav>
+        </nav id="menu">
     </header>
-
     <main>
-        <h1>Em breve...</h1>
+        <section id="ficha">
+            <img src="imagens/perfil-claro.png" alt="Júlio Luwungu" class="foto">
+            <h1>Júlio Luwungu</h1>
+            <p>O meu nome é Júlio Paulo Altino Luwungu. Matriculado no Instituto Politécnico Industrial de Luanda, no curso de Técnico de Informática, 12ª classe. Apaixonado por tecnologia e buscando cada vez mais desenvolver as minhas habilidades em programação. Almejo me formar em Engenharia de Software e continuo estudando para tornar esse sonho realidade.</p>
+            <div id="social">
+                <a href="https://www.facebook.com/profile.php?id=61566566562710" target="_blank" rel="nofollow"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/julioluwungu" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </section>
+
+        <section id="detalhes">
+            <article id="video">
+                <h2><i class="fa-solid fa-handshake"></i> Deixe-me apresentar</h2>
+
+                <div class="video-conteiner">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kNh91OD0nTE?si=jIsfcTRJ44HrBrFS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+
+            <article id="skills">
+                <h2><i class="fa-solid fa-brain"></i> Minhas skills</h2>
+
+                <div id="skills-conteiner">
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-code"></i> HTML5</span>
+                            <span class="porcentagem">80%</span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-code"></i> CSS3</span>
+                            <span class="porcentagem">70%</span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-code"></i> JavaScrip</span>
+                            <span class="porcentagem">75%</span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-code"></i> Python</span>
+                            <span class="porcentagem">70%</span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-person-rays"></i> Comunicação</span>
+                            <span class="porcentagem">70%</span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-person-rays"></i> Trabalho em equipe</span>
+                            <span class="porcentagem">80%</span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="formacoes">
+                <h2><i class="fa-solid fa-graduation-cap"></i> Formações</h2>
+
+                <div id="formacoes-conteiner">
+                    <div class="curso">
+                        <p class="periodo">2023</p>
+                        <h3 class="instituicao">Centro de Formação Tecnológica do ITEL</h3>
+                        <p class="titulacao">Algorítmos e Lógica de Programação</p>
+                    </div>
+
+                    <div class="curso">
+                        <p class="periodo">2023-2027</p>
+                        <h3 class="instituicao">Instituto Politécnico Industrial de Luanda</h3>
+                        <p class="titulacao">Técnico de Informática</p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="projetos">
+                <h2><i class="fa-solid fa-trowel-bricks"></i> Projetos</h2>
+                
+                <div id="projetos-conteiner">
+                    <div class="projeto">
+                        <div class="imagem"><a href="https://julioluwungu.github.io/projeto-android/" target="_blank" rel="external"><img src="imagens/projeto-android.jpg" alt="Projeto01" class="foto"></a></div>
+
+                        <div class="projeto-info">
+                            <p class="periodo">2025</p>
+                            <h3 class="titulo">Projeto Android</h3>
+                            <p>Projeto construído para treinar responsividade em sites.</p>
+                            <details>
+                                <summary>Saiba mais...</summary>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nam corrupti, quos quasi nulla expedita reiciendis odit veritatis rerum magni perspiciatis enim neque accusantium. Consequuntur laboriosam beatae quos vitae velit!</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="imagem"><a href="https://julioluwungu.github.io/projeto-cordel/" target="_blank" rel="external"><img src="imagens/projeto-cordel.jpg" alt="Projeto02" class="foto"></a></div>
+
+                        <div class="projeto-info">
+                            <p class="periodo">2025</p>
+                            <h3 class="titulo">Projeto Cordel</h3>
+                            <p>Projeto construído para treinar efeito paralax em imagens.</p>
+                            <details>
+                                <summary>Saiba mais...</summary>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nam corrupti, quos quasi nulla expedita reiciendis odit veritatis rerum magni perspiciatis enim neque accusantium. Consequuntur laboriosam beatae quos vitae velit!</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="imagem"><a href="https://julioluwungu.github.io/projeto-social/" target="_blank" rel="external"><img src="imagens/projeto-social.jpg" alt="Projeto03" class="foto"></a></div>
+
+                        <div class="projeto-info">
+                            <p class="periodo">2025</p>
+                            <h3 class="titulo">Projeto Social</h3>
+                            <p>Projeto construído para treinar o uso de iframes em sites.</p>
+                            <details>
+                                <summary>Saiba mais...</summary>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nam corrupti, quos quasi nulla expedita reiciendis odit veritatis rerum magni perspiciatis enim neque accusantium. Consequuntur laboriosam beatae quos vitae velit!</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="projeto">
+                        <div class="imagem"><a href="https://julioluwungu.github.io/projeto-login/" target="_blank" rel="external"><img src="imagens/projeto-login.jpg" alt="Projeto04" class="foto"></a></div>
+
+                        <div class="projeto-info">
+                            <p class="periodo">2025</p>
+                            <h3 class="titulo">Projeto Login</h3>
+                            <p>Projeto construído para treinar o uso de formulários em sites.</p>
+                            <details>
+                                <summary>Saiba mais...</summary>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nam corrupti, quos quasi nulla expedita reiciendis odit veritatis rerum magni perspiciatis enim neque accusantium. Consequuntur laboriosam beatae quos vitae velit!</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
-
     <footer>
-
+        Portfólio desenvolvido por <a href="https://github.com/julioluwungu" target="_blank" rel="nofollow">Júlio Luwungu</a> em 2026
     </footer>
 
     <script src="scripts/script.js"></script>

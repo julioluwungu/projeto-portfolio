@@ -1,5 +1,6 @@
 const botao = document.getElementById('botao-tema');
 const body = document.body;
+let foto = document.querySelector('section#ficha img.foto')
 
 // Persistência do tema
 const temasalvo = localStorage.getItem('tema');
@@ -20,10 +21,15 @@ botao.addEventListener('click', () => {
   const isescuro = body.classList.toggle('escuro');
   temaEscuro(isescuro);
   localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
+  if (foto.src.includes('perfil-claro.png')) {
+    foto.src = '../imagens/perfil-escuro.png';
+  } else {
+    foto.src = '../imagens/perfil-claro.png';
+  }
 });
 
 // Scroll suave para links de navegação
-const navLinks = document.querySelectorAll('#menu ul a.link');
+const navLinks = document.querySelectorAll('#menu ul > li > a.link');
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
