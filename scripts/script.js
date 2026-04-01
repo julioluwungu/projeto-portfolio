@@ -6,6 +6,17 @@ let foto = document.querySelector('section#ficha img.foto')
 const temasalvo = localStorage.getItem('tema');
 temaEscuro(temasalvo === 'escuro');
 
+// Persistência da foto
+if (temasalvo === 'escuro') {
+  if (foto.src.includes('claro')) {
+    foto.src = foto.src.replace('claro', 'escuro');
+  }
+} else {
+  if (foto.src.includes('escuro')) {
+    foto.src = foto.src.replace('escuro', 'claro');
+  }
+}
+
 // Função para alternar entre tema claro e escuro
 function temaEscuro(tipo) {
   if (tipo == true) {
